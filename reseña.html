@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reseña - Tu Ruta, Tus Reglas</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      label {
+        color: #333;
+      }
+      input, textarea {
+        border-color: #007bff;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+      }
+      .alert {
+        display: none;
+        margin-top: 15px;
+      }
+      .star-rating {
+        direction: rtl;
+        display: inline-block;
+        padding: 20px;
+      }
+      .star-rating input[type=radio] {
+        display: none;
+      }
+      .star-rating label {
+        color: #bbb;
+        font-size: 24px;
+        padding: 0;
+        cursor: pointer;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+      }
+      .star-rating label:hover,
+      .star-rating label:hover ~ label,
+      .star-rating input[type=radio]:checked ~ label {
+        color: #f2b600;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="./imagenes/Logo.png" alt="Logo" style="width:200px; height: 100px;">
+      </a>
+      <a class="navbar-brand" href="#">Tu Ruta, Tus Reglas</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Autos.html">Autos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Servicios
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Mantenimiento.html">Mantenimiento</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Montallantas.html">Montallantas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Alineación.html">Alineación</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Balanceo.html">Balanceo</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+      </div>
+    </nav>
+    
+    <section>
+      <hr>
+      <h2 class="text-center">Reseña</h2>
+      <hr>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-12 jumbotron">
+            <!-- Formulario de reseña -->
+            <form id="reviewForm" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="reviewName">Nombre *</label>
+                <input type="text" class="form-control" id="reviewName" name="reviewName" required>
+              </div>
+              <div class="form-group">
+                <label for="reviewEmail">Correo Electrónico *</label>
+                <input type="email" class="form-control" id="reviewEmail" name="reviewEmail" required>
+              </div>
+              <div class="form-group">
+                <label for="reviewComment">Comentario *</label>
+                <textarea rows="5" class="form-control" id="reviewComment" name="reviewComment" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="reviewImages">Imágenes (3 imágenes) *</label>
+                <input type="file" class="form-control-file" id="reviewImages" name="reviewImages" accept="image/*" multiple required>
+              </div>
+              <div class="form-group">
+                <label>Calificación *</label>
+                <div class="star-rating">
+                  <input type="radio" id="star5" name="rating" value="5" required/>
+                  <label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label for="star1" title="1 star"><i class="fas fa-star"></i></label>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar Reseña</button>
+              </div>
+            </form>
+            <div id="reviewThankYouMessage" class="alert alert-success text-center">
+              Reseña Enviada Con Éxito
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © MyCompany. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap-4.4.1.js"></script>
+    <!-- Script para validación y manejo del formulario de reseña -->
+    <script>
+      document.getElementById('reviewForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let name = document.getElementById('reviewName').value;
+        let email = document.getElementById('reviewEmail').value;
+        let comment = document.getElementById('reviewComment').value;
+        let images = document.getElementById('reviewImages').files;
+        let rating = document.querySelector('input[name="rating"]:checked');
+        
+        if (!name || !email || !comment || images.length !== 3 || !rating) {
+          alert('Por favor, complete todos los campos obligatorios y seleccione 3 imágenes.');
+          return;
+        }
+        document.getElementById('reviewThankYouMessage').style.display = 'block';
+        setTimeout(function() {
+          document.getElementById('reviewThankYouMessage').style.display = 'none';
+          document.getElementById('reviewForm').reset();
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

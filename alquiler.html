@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Resume Page Template</title>
+    <!-- Boot<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alquiler de Carros - Tu Ruta, Tus Reglas</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      label {
+        color: #333;
+      }
+      input, textarea, select {
+        border-color: #007bff;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+      }
+      .alert {
+        display: none;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="./imagenes/Logo.png" alt="Logo" style="width:200px; height: 100px;">
+      </a>
+      <a class="navbar-brand" href="#">Tu Ruta, Tus Reglas</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Autos.html">Autos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Servicios
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Mantenimiento.html">Mantenimiento</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Montallantas.html">Montallantas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Alineación.html">Alineación</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Balanceo.html">Balanceo</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+      </div>
+    </nav>
+    
+    <section>
+      <hr>
+      <h2 class="text-center">Alquiler de Carros</h2>
+      <hr>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-12 jumbotron">
+            <!-- Formulario de alquiler de carros -->
+            <form id="alquilerForm">
+              <div class="form-group">
+                <label for="nombreCompleto">Nombre Completo *</label>
+                <input type="text" class="form-control" id="nombreCompleto" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" class="form-control" id="telefono" pattern="[0-9]+" required>
+              </div>
+              <div class="form-group">
+                <label for="correo">Correo Electrónico *</label>
+                <input type="email" class="form-control" id="correo" required>
+              </div>
+              <div class="form-group">
+                <label for="direccion">Dirección *</label>
+                <input type="text" class="form-control" id="direccion" required>
+              </div>
+              <div class="form-group">
+                <label for="fechaAlquiler">Fecha de Alquiler *</label>
+                <input type="date" class="form-control" id="fechaAlquiler" required>
+              </div>
+              <div class="form-group">
+                <label for="fechaEntrega">Fecha de Entrega *</label>
+                <input type="date" class="form-control" id="fechaEntrega" required>
+              </div>
+              <div class="form-group">
+                <label for="metodoPago">Método de Pago *</label>
+                <select class="form-control" id="metodoPago" required>
+                  <option value="">Seleccione un método de pago</option>
+                  <option value="debito">Tarjeta de débito</option>
+                  <option value="credito">Tarjeta de crédito</option>
+                  <option value="transferencia">Transferencia</option>
+                  <option value="pse">PSE</option>
+                </select>
+              </div>
+			<div class="form-group">
+                <label for="tipo">Tipo de alquiler *</label>
+                <select class="form-control" id="tipo" required>
+                  <option value="">Seleccione tipo de servicio</option>
+                  <option value="debito">Basico</option>
+                  <option value="credito">Estandar</option>
+                  <option value="transferencia">Lojo</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="marcaCarro">Marca de Carro *</label>
+                <input type="text" class="form-control" id="marcaCarro" required>
+              </div>
+              <div class="form-group">
+                <label for="tipoCarro">Tipo de Carro *</label>
+                <select class="form-control" id="tipoCarro" required>
+                  <option value="">Seleccione el tipo de carro</option>
+                  <option value="manual">Manual</option>
+                  <option value="automatico">Automático</option>
+                </select>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
+            <div id="alquilerThankYouMessage" class="alert alert-success text-center">
+              Pronto nos pondremos en contacto para confirmar su alquiler
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © MyCompany. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap-4.4.1.js"></script>
+    <!-- Script para validación y manejo del formulario de alquiler -->
+    <script>
+      document.getElementById('alquilerForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (this.checkValidity()) {
+          document.getElementById('alquilerThankYouMessage').style.display = 'block';
+          setTimeout(function() {
+            document.getElementById('alquilerThankYouMessage').style.display = 'none';
+            document.getElementById('alquilerForm').reset();
+          }, 3000);
+        } else {
+          this.reportValidity();
+        }
+      });
+    </script>
+  </body>
+</html>strap -->
+    <link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col-6">
+          <h1>John Doe</h1>
+        </div>
+        <div class="col-6">
+          <p class="text-right"><a href="">Download my Resume</a></p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <div class="media">
+            <img class="mr-3" src="../images/115X115.gif" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Web Developer</h5>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="row justify-content-md-around m-1">
+            <address>
+              <strong>John Doe</strong><br>
+              1355 Market St, Suite 900<br>
+              San Francisco, CA 94103<br>
+              <abbr title="Phone">P:</abbr> (123) 456-7890<br>
+              <a href="mailto:#">first.last@example.com</a>
+            </address>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <h2>Education</h2>
+          <hr>
+          <div class="row">
+            <div class="col-6">
+              <h4>College of Web Design</h4>
+            </div>
+            <div class="col-6">
+              <h5 class="text-right"><span aria-hidden="true"></span> Jan 2002 - Dec 2006</h5>
+            </div>
+          </div>
+          <h5><span class="badge badge-secondary">Bachelors</span></h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, recusandae, corporis, tempore nam fugit deleniti sequi excepturi quod repellat laboriosam soluta laudantium amet dicta non ratione distinctio nihil dignissimos esse!</p>
+          <div class="row">
+            <div class="col-6">
+              <h4>University of Web Design</h4>
+            </div>
+            <div class="col-6">
+              <h5 class="text-right"><span aria-hidden="true"></span> Jan 2007 - Dec 2008</h5>
+            </div>
+          </div>
+          <h5><span class="badge badge-secondary">Masters</span></h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, recusandae, corporis, tempore nam fugit deleniti sequi excepturi quod repellat laboriosam soluta laudantium amet dicta non ratione distinctio nihil dignissimos esse!</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <h2>Skill Set</h2>
+          <hr>
+          <div class="progress mt-4">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%"> HTML</div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"> CSS</div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"> JAVASCRIPT</div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"> PHP</div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%"> WORDPRESS</div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"> PHOTOSHOP</div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"> ILLUSTRATOR</div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h2>Work Experience</h2>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <div class="row">
+            <div class="col-5">
+              <h4>ABC Corp.</h4>
+            </div>
+            <div class="col-6">
+              <h5 class="text-right"><span aria-hidden="true"></span> Jan 2002 - Dec 2006</h5>
+            </div>
+          </div>
+          <h5><span class="badge badge-secondary">Web Developer</span></h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, recusandae, corporis, tempore nam fugit deleniti sequi excepturi quod repellat laboriosam soluta laudantium amet dicta non ratione distinctio nihil dignissimos esse!</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="row">
+            <div class="col-5">
+              <h4>XYZ Corp.</h4>
+            </div>
+            <div class="col-6">
+              <h5 class="text-right"><span aria-hidden="true"></span> Jan 2002 - Dec 2006</h5>
+            </div>
+          </div>
+          <h5><span class="badge badge-secondary">Senior Web Developer</span></h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, recusandae, corporis, tempore nam fugit deleniti sequi excepturi quod repellat laboriosam soluta laudantium amet dicta non ratione distinctio nihil dignissimos esse!</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <h2>Portfolio</h2>
+      <hr>
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="../images/300X200.gif" alt=""></div>
+          <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="../images/300X200.gif" alt=""></div>
+          <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="../images/300X200.gif" alt=""></div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="../images/300X200.gif" alt=""></div>
+          <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="../images/300X200.gif" alt=""></div>
+          <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="../images/300X200.gif" alt=""></div>
+        </div>
+      </div>
+      <hr>
+      <h2>Contact</h2>
+      <hr>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8  col-12 jumbotron">
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" aria-describedby="emailHelp">
+                <span id="emailHelp" class="form-text text-muted" style="display: none;">Please enter a valid e-mail address.</span>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea rows="10" cols="100" class="form-control" id="message" name="message" placeholder="Message" aria-describedby="messageHelp"></textarea>
+                <span id="messageHelp" class="form-text text-muted" style="display: none;">Please enter a message.</span>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <footer class="text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>Copyright © MyWebsite. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>
